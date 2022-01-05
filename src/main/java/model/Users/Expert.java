@@ -19,4 +19,14 @@ public class Expert {
     private int score;
     @ManyToMany
     List<SubService> homeServices = new ArrayList<>();
+
+    public Expert(String firstName, String lastName, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+    }
+
+    public Expert() {
+
+    }
 }
