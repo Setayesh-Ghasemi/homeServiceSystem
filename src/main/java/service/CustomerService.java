@@ -13,4 +13,9 @@ public class CustomerService {
         customerDao.addCustomer(customer);
     }
 
+    public void changePassword(String password, String email) {
+        Customer customer = customerDao.findCustomerByEmail(email);
+        customer.setPassword(password);
+        customerDao.updateCustomerPassword(customer);
+    }
 }
