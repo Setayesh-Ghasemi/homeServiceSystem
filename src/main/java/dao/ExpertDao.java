@@ -17,5 +17,11 @@ public class ExpertDao {
         session.close();
     }
 
-
+    public void deleteExpert(Expert expert){
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        session.delete(expert);
+        transaction.commit();
+        session.close();
+    }
 }
