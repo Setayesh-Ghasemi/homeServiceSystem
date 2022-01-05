@@ -18,4 +18,16 @@ public class Customer {
     private String password;
     @Enumerated(EnumType.STRING)
     TypeOfUserStatus typeOfUserStatus;
+
+    public Customer(String firstName, String lastName, String address, String email, String password) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.email = email;
+        this.password = password;
+    }
+
+    public Customer() {
+
+    }
 }
