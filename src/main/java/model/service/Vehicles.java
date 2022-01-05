@@ -17,5 +17,5 @@ public class Vehicles extends SubService {
     @Enumerated(EnumType.STRING)
     TypeOfService typeOfService;
     @ManyToMany
-    private List<Expert> expertList=new ArrayList<>();
+    private List<Expert> expertList = new ArrayList<>();
 }
