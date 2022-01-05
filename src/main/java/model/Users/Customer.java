@@ -2,8 +2,10 @@ package model.Users;
 
 import enums.TypeOfUserStatus;
 import lombok.Data;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Data
@@ -15,6 +17,9 @@ public class Customer {
     private String lastName;
     private String address;
     private String email;
+    @Temporal(TemporalType.TIME)
+    @CreationTimestamp
+    private Date registration;
     private String password;
     @Enumerated(EnumType.STRING)
     TypeOfUserStatus typeOfUserStatus;
