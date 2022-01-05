@@ -17,5 +17,11 @@ public class CustomerDao {
         session.close();
     }
 
-
+    public void updateCustomerPassword(Customer customer) {
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        session.update(customer);
+        transaction.commit();
+        session.close();
+    }
 }
