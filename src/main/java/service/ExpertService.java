@@ -11,5 +11,8 @@ public class ExpertService {
         expertDao.addExpert(expert);
     }
 
-    
+    public void deleteExpert(String email) {
+        Expert expert = expertDao.findExpertByEmail(email);
+        expertDao.deleteExpert(expert);
+    }
 }
