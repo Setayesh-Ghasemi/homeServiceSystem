@@ -12,21 +12,21 @@ public class CheckValidation {
     private static final String USERNAME_PATTERN = "^[a-zA-Z]{3,20}";
 
     public static boolean isUserNameValid(String userName) {
-        Pattern UserNamePattern = Pattern.compile(USERNAME_PATTERN);
+        Pattern userNamePattern = Pattern.compile(USERNAME_PATTERN);
         if ((userName == null))
             return false;
-        Matcher userMatcher = UserNamePattern.matcher(userName);
+        Matcher userMatcher = userNamePattern.matcher(userName);
         if (!userMatcher.matches())
             throw new InvalidNameException("Invalid user name");
         return true;
     }
 
     public static boolean isPasswordValid(String password) {
-        Pattern PasswordPattern = Pattern.compile(PASSWORD_PATTERN);
+        Pattern passwordPattern = Pattern.compile(PASSWORD_PATTERN);
         if ((password == null))
             return false;
-        Matcher passMatcher = PasswordPattern.matcher(password);
-        if (!passMatcher.matches())
+        Matcher passwordMatcher = passwordPattern.matcher(password);
+        if (!passwordMatcher.matches())
             throw new InvalidPasswordException("Invalid password");
         return true;
     }
