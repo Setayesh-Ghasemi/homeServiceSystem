@@ -28,4 +28,11 @@ public class ExpertDao {
         session.close();
     }
 
+    public void updateExpertCredit(Expert expert) {
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        session.update(expert);
+        transaction.commit();
+        session.close();
+    }
 }

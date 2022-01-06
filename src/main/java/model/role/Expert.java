@@ -15,7 +15,7 @@ public class Expert extends User {
     private int id;
     private String email;
     private int score;
-    private float expertCredit;
+    private double expertCredit;
     @ManyToMany
     List<SubService> subServices = new ArrayList<>();
 

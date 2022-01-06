@@ -23,10 +23,9 @@ public class Customer extends User {
     private Date registration;
     private String password;
     private int username;
-    private float customerCredit;
+    private double customerCredit;
     @Enumerated(EnumType.STRING)
     TypeOfUserStatus typeOfUserStatus;
-
     @OneToMany
     private List<Order> orders = new ArrayList<>();
 
