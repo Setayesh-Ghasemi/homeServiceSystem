@@ -3,6 +3,8 @@ package service;
 import dao.ExpertDao;
 import model.Users.Expert;
 
+import java.util.List;
+
 public class ExpertService {
     ExpertDao expertDao = new ExpertDao();
 
@@ -14,5 +16,10 @@ public class ExpertService {
     public void deleteExpert(String email) {
         Expert expert = expertDao.findExpertByEmail(email);
         expertDao.deleteExpert(expert);
+    }
+
+    public void printShowExpert() {
+        List<Expert> experts = expertDao.showExpert();
+        experts.stream().forEach(i -> System.out.println(i.getLastName()));
     }
 }
