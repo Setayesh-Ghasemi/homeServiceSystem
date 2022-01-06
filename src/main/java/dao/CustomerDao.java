@@ -19,7 +19,7 @@ public class CustomerDao {
         session.close();
     }
 
-    public Customer findCustomerByEmail(String email) {
+    /*public Customer findCustomerByEmail(String email) {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
         String sql = "select * from customer where email = :email";
@@ -29,7 +29,7 @@ public class CustomerDao {
         Customer customer = (Customer) sqlQuery.list().get(0);
         session.close();
         return customer;
-    }
+    }*/
 
     public void updateCustomerPassword(Customer customer) {
         Session session = sessionFactory.openSession();
