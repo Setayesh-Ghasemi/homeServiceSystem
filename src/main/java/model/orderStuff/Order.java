@@ -1,4 +1,4 @@
-package model.orders;
+package model.orderStuff;
 
 import lombok.Data;
 
@@ -19,4 +19,15 @@ public class Order {
     private Date startDate;
     private Date endDate;
     private String address;
+
+    public Order(float cost, String description, Date startDate, Date endDate, String address) {
+        this.cost = cost;
+        this.description = description;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.address = address;
+    }
+
+    public Order() {
+    }
 }

@@ -1,6 +1,6 @@
 package dao;
 
-import model.orders.Order;
+import model.orderStuff.Order;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;

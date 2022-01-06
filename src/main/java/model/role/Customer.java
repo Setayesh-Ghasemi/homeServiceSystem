@@ -2,7 +2,7 @@ package model.role;
 
 import enums.TypeOfUserStatus;
 import lombok.Data;
-import model.orders.Order;
+import model.orderStuff.Order;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
