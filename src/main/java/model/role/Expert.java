@@ -9,25 +9,21 @@ import java.util.List;
 
 @Entity
 @Data
-public class Expert {
+public class Expert extends User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String firstName;
-    private String lastName;
     private String email;
     private int score;
     private float expertCredit;
     @ManyToMany
-    List<SubService> homeServices = new ArrayList<>();
+    List<SubService> subServices = new ArrayList<>();
 
     public Expert(String firstName, String lastName, String email) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+        super(firstName, lastName);
         this.email = email;
     }
 
     public Expert() {
-
     }
 }

@@ -28,16 +28,4 @@ public class ExpertDao {
         session.close();
     }
 
-    /*public Expert findExpertByEmail(String email) {
-        Session session = sessionFactory.openSession();
-        Transaction transaction = session.beginTransaction();
-        String sql = "select * from expert where email = :email";
-        SQLQuery sqlQuery = session.createSQLQuery(sql);
-        sqlQuery.addEntity(Expert.class);
-        sqlQuery.setParameter("email", email);
-        Expert expert = (Expert) sqlQuery.list().get(0);
-        session.close();
-        return expert;
-    }*/
-
 }

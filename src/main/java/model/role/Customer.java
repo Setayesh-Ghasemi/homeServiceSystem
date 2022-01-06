@@ -2,38 +2,42 @@ package model.role;
 
 import enums.TypeOfUserStatus;
 import lombok.Data;
+import model.orders.Order;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Data
-public class Customer {
+public class Customer extends User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String firstName;
-    private String lastName;
     private String address;
     private String email;
     @Temporal(TemporalType.TIME)
     @CreationTimestamp
     private Date registration;
     private String password;
+    private int username;
     private float customerCredit;
     @Enumerated(EnumType.STRING)
     TypeOfUserStatus typeOfUserStatus;
 
+    @OneToMany
+    private List<Order> orders = new ArrayList<>();
+
+    public Customer() {
+    }
+
     public Customer(String firstName, String lastName, String address, String email, String password) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+        super(firstName, lastName);
         this.address = address;
         this.email = email;
         this.password = password;
     }
 
-    public Customer() {
-
-    }
 }

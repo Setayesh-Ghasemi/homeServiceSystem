@@ -9,12 +9,10 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-public class Manager {
+public class Manager extends User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String firstName;
-    private String lastName;
     private int username;
     private String password;
 }
