@@ -13,6 +13,12 @@ public class ExpertService {
         expertDao.saveExpert(expert);
     }
 
+    public void deleteExpert(String email) {
+        Expert expert = expertDao.findExpertByEmail(email);
+        expertDao.removeExpert(expert);
+
+    }
+
     public void printShowExperts() {
         List<Expert> experts = expertDao.showExperts();
         experts.stream().forEach(i -> System.out.println(i.getLastName()));
