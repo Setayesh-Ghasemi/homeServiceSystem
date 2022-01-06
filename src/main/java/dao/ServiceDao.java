@@ -13,7 +13,7 @@ public class ServiceDao {
     public SubService findServiceByName(String name) {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        String sql = "select * from HomeService where name = :name ";
+        String sql = "select * from SubService where name = :name ";
         SQLQuery sqlQuery = session.createSQLQuery(sql);
         sqlQuery.addEntity(SubService.class);
         sqlQuery.setParameter("name", name);
