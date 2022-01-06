@@ -4,6 +4,8 @@ import dao.CustomerDao;
 import dao.ExpertDao;
 import model.Users.Customer;
 
+import java.util.List;
+
 public class CustomerService {
     CustomerDao customerDao = new CustomerDao();
     ExpertDao expertDao = new ExpertDao();
@@ -17,5 +19,10 @@ public class CustomerService {
         Customer customer = customerDao.findCustomerByEmail(email);
         customer.setPassword(password);
         customerDao.updateCustomerPassword(customer);
+    }
+
+    public void printShowCustomer() {
+        List<Customer> customers = customerDao.showCustomer();
+        customers.stream().forEach(i -> System.out.println(i.getLastName()));
     }
 }
