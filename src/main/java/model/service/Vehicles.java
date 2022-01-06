@@ -18,4 +18,6 @@ public class Vehicles extends SubService {
     TypeOfService typeOfService;
     @ManyToMany
     private List<Expert> expertList = new ArrayList<>();
+    @Transient
+    private static List<TypeOfService> TypeOfServices = new ArrayList<>();
 }

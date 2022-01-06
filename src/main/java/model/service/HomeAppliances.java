@@ -6,6 +6,7 @@ import model.Users.Expert;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Entity
@@ -18,4 +19,7 @@ public class HomeAppliances extends SubService {
     TypeOfService typeOfService;
     @ManyToMany
     private List<Expert> expertList = new ArrayList<>();
+    @Transient
+    private static List<TypeOfService> TypeOfServices = Arrays.asList(TypeOfService.KITCHEN_APPLIANCES,
+            TypeOfService.WASHING, TypeOfService.AUDIOVISUAL);
 }
