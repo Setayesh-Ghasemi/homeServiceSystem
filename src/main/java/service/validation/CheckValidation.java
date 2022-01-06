@@ -15,8 +15,8 @@ public class CheckValidation {
         Pattern userNamePattern = Pattern.compile(USERNAME_PATTERN);
         if ((userName == null))
             return false;
-        Matcher userMatcher = userNamePattern.matcher(userName);
-        if (!userMatcher.matches())
+        Matcher userNameMatcher = userNamePattern.matcher(userName);
+        if (!userNameMatcher.matches())
             throw new InvalidNameException("Invalid user name");
         return true;
     }
