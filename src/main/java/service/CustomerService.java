@@ -21,8 +21,4 @@ public class CustomerService {
         customerDao.updateCustomerPassword(customer);
     }
 
-    public void printShowCustomer() {
-        List<Customer> customers = customerDao.showCustomer();
-        customers.stream().forEach(i -> System.out.println(i.getLastName()));
-    }
 }

@@ -18,8 +18,4 @@ public class ExpertService {
         expertDao.deleteExpert(expert);
     }
 
-    public void printShowExpert() {
-        List<Expert> experts = expertDao.showExpert();
-        experts.stream().forEach(i -> System.out.println(i.getLastName()));
-    }
 }
