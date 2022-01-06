@@ -3,6 +3,8 @@ package service;
 import dao.ExpertDao;
 import model.role.Expert;
 
+import java.util.List;
+
 public class ExpertService {
     ExpertDao expertDao = new ExpertDao();
 
@@ -11,4 +13,8 @@ public class ExpertService {
         expertDao.saveExpert(expert);
     }
 
+    public void printShowExperts() {
+        List<Expert> experts = expertDao.showExperts();
+        experts.stream().forEach(i -> System.out.println(i.getLastName()));
+    }
 }
