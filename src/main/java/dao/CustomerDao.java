@@ -41,13 +41,5 @@ public class CustomerDao {
         session.close();
     }
 
-    public List<Customer> showCustomer() {
-        Session session = sessionFactory.openSession();
-        Transaction transaction = session.beginTransaction();
-        String sql = "select * from person where DTYPE =customer";
-        SQLQuery sqlQuery = session.createSQLQuery(sql);
-        sqlQuery.addEntity(Customer.class);
-        List<Customer> customerList = sqlQuery.list();
-        return customerList;
-    }
+
 }

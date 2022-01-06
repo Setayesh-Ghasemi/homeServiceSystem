@@ -42,14 +42,4 @@ public class ExpertDao {
         return expert;
     }
 
-    public List<Expert> showExpert() {
-        Session session = sessionFactory.openSession();
-        Transaction transaction = session.beginTransaction();
-        String sql = "select * from person where DTYPE =Expert";
-        SQLQuery sqlQuery = session.createSQLQuery(sql);
-        sqlQuery.addEntity(Expert.class);
-        List<Expert> expertList = sqlQuery.list();
-        return expertList;
-    }
-
 }
