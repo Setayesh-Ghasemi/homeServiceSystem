@@ -1,4 +1,4 @@
-package model.Users;
+package model.role;
 
 import lombok.Data;
 
@@ -15,5 +15,6 @@ public class Manager {
     private int id;
     private String firstName;
     private String lastName;
+    private int username;
     private String password;
 }

@@ -1,7 +1,7 @@
-package model.Users;
+package model.role;
 
 import lombok.Data;
-import model.service.SubService;
+import model.services.SubService;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -17,6 +17,7 @@ public class Expert {
     private String lastName;
     private String email;
     private int score;
+    private float expertCredit;
     @ManyToMany
     List<SubService> homeServices = new ArrayList<>();
 

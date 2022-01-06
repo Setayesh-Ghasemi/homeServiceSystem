@@ -1,19 +1,17 @@
 package dao;
 
-import model.Users.Customer;
+import model.role.Customer;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-import java.util.List;
-
 public class CustomerDao {
 
     static SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 
-    public void addCustomer(Customer customer) {
+    public void saveCustomer(Customer customer) {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
         session.save(customer);
@@ -40,6 +38,5 @@ public class CustomerDao {
         transaction.commit();
         session.close();
     }
-
 
 }

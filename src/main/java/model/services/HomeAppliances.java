@@ -1,8 +1,8 @@
-package model.service;
+package model.services;
 
 import enums.TypeOfService;
 import lombok.Data;
-import model.Users.Expert;
+import model.role.Expert;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -11,7 +11,7 @@ import java.util.List;
 
 @Entity
 @Data
-public class Cleaning extends SubService {
+public class HomeAppliances extends SubService {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -20,6 +20,6 @@ public class Cleaning extends SubService {
     @ManyToMany
     private List<Expert> expertList = new ArrayList<>();
     @Transient
-    private static List<TypeOfService> TypeOfServices = Arrays.asList(TypeOfService.CLEANING, TypeOfService.LAUNDRY,
-            TypeOfService.CARPET_WASHING, TypeOfService.SOFA_WASHING, TypeOfService.HOME_SPRAYING);
+    private static List<TypeOfService> TypeOfServices = Arrays.asList(TypeOfService.KITCHEN_APPLIANCES,
+            TypeOfService.WASHING, TypeOfService.AUDIOVISUAL);
 }

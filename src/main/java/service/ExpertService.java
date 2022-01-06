@@ -1,21 +1,19 @@
 package service;
 
 import dao.ExpertDao;
-import model.Users.Expert;
-
-import java.util.List;
+import model.role.Expert;
 
 public class ExpertService {
     ExpertDao expertDao = new ExpertDao();
 
     public void createExpert(String firstName, String lastName, String email) {
         Expert expert = new Expert(firstName, lastName, email);
-        expertDao.addExpert(expert);
+        expertDao.saveExpert(expert);
     }
 
-    public void deleteExpert(String email) {
+    public void removeExpert(String email) {
         Expert expert = expertDao.findExpertByEmail(email);
-        expertDao.deleteExpert(expert);
+        expertDao.removeExpert(expert);
     }
 
 }

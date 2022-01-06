@@ -1,4 +1,4 @@
-package model.Users;
+package model.role;
 
 import enums.TypeOfUserStatus;
 import lombok.Data;
@@ -21,6 +21,7 @@ public class Customer {
     @CreationTimestamp
     private Date registration;
     private String password;
+    private float customerCredit;
     @Enumerated(EnumType.STRING)
     TypeOfUserStatus typeOfUserStatus;
 

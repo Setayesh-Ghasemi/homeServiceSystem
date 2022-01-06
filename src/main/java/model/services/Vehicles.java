@@ -1,8 +1,8 @@
-package model.service;
+package model.services;
 
 import enums.TypeOfService;
 import lombok.Data;
-import model.Users.Expert;
+import model.role.Expert;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -10,7 +10,7 @@ import java.util.List;
 
 @Entity
 @Data
-public class BuildingFacilities extends SubService {
+public class Vehicles extends SubService {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;

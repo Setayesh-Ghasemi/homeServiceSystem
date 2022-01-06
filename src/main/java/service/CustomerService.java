@@ -2,9 +2,7 @@ package service;
 
 import dao.CustomerDao;
 import dao.ExpertDao;
-import model.Users.Customer;
-
-import java.util.List;
+import model.role.Customer;
 
 public class CustomerService {
     CustomerDao customerDao = new CustomerDao();
@@ -12,7 +10,7 @@ public class CustomerService {
 
     public void createCustomer(String firstName, String lastName, String address, String email, String password) {
         Customer customer = new Customer(firstName, lastName, address, email, password);
-        customerDao.addCustomer(customer);
+        customerDao.saveCustomer(customer);
     }
 
     public void changePassword(String password, String email) {
