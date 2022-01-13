@@ -18,10 +18,10 @@ import java.util.Properties;
 
 
 @Configuration
-@PropertySource("classpath:database.properties")
+@PropertySource("classpath:hibernate.properties")
 @EnableTransactionManagement
 @EnableJpaRepositories(basePackages = "ir.maktab.data.dao")
-public class DatabaseConfig {
+public class HibernateConfig {
     @Autowired
     private Environment environment;
 
