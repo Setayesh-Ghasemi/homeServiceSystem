@@ -1,4 +1,4 @@
-package model.services;
+package ir.maktab.data.model.entity.services;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -20,6 +20,6 @@ public class MainService {
     private int id;
     @Column(unique = true)
     private String name;
-    @OneToMany(mappedBy = "service", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "mainService", fetch = FetchType.EAGER)
     private Set<SubService> subServices = new HashSet<>();
 }

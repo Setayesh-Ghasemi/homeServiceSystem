@@ -1,4 +1,4 @@
-package exception;
+package ir.maktab.exception;
 
 public class InvalidImageSizeException extends RuntimeException {
 

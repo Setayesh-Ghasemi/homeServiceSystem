@@ -1,7 +1,7 @@
-package service.validation;
+package ir.maktab.service.validation;
 
-import exception.InvalidNameException;
-import exception.InvalidPasswordException;
+import ir.maktab.exception.InvalidNameException;
+import ir.maktab.exception.InvalidPasswordException;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

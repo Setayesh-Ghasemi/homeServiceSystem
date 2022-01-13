@@ -1,4 +1,4 @@
-package enums;
+package ir.maktab.data.model.enums;
 
 public enum TypeOfService {
     //Home Appliances

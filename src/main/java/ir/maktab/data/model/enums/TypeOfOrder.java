@@ -1,4 +1,4 @@
-package enums;
+package ir.maktab.data.model.enums;
 
 public enum TypeOfOrder {
     WAITING_FOR_EXPERT_SUGGESTION("waitingForExpertSuggestions"),

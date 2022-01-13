@@ -1,10 +1,10 @@
-package model.orderStuff;
+package ir.maktab.data.model.entity.orderStuff;
 
+import ir.maktab.data.model.entity.role.Expert;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import model.role.Expert;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
@@ -20,11 +20,11 @@ public class Suggestion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @CreationTimestamp
-    private Calendar creationDateOfSuggestion;
-    private long suggestedPrice;
-    private long periodOfWorkTime;
+    private Calendar submitDateSuggestion;
     @Temporal(TemporalType.TIME)
     private Calendar startTime;
+    private long priceSuggested;
+    private long durationOfWorkTime;
     @ManyToOne
     private Expert expert;
     @ManyToOne

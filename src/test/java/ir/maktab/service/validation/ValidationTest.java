@@ -1,8 +1,8 @@
 /*
-package service.validation;
+package ir.maktab.service.validation;
 
-import exception.InvalidNameException;
-import exception.InvalidPasswordException;
+import ir.maktab.exception.InvalidNameException;
+import ir.maktab.exception.InvalidPasswordException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
