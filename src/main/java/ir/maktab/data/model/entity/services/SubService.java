@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class SubService {
+public class SubService extends MainService {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
